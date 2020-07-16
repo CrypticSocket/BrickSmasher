@@ -79,20 +79,27 @@ export default class Game {
         {
             this.context.fillStyle = 'rgba(0,0,0,1)'
             this.context.fillRect(0, 0, this.width, this.height)
-            this.context.font = "30px Arial"
+        
+            this.context.font = "80px Arial"
             this.context.textAlign = 'center'
             this.context.fillStyle = '#F2AA4C'
-            this.context.fillText('Brick Breaker!', this.width/2, 40)
-            this.context.fillStyle = '#E94B3C'
-            this.context.font = "30px Arial"
-            this.context.fillText('Press ESC to Pause', this.width/2, this.height/2 - 80)
-            this.context.fillText('', this.width/2, this.height/2 - 40)
-            this.context.fillText('LEFT ARROW KEY to move left', this.width/2, this.height/2 - 20)
-            this.context.fillText('RIGHT ARROW KEY to move right', this.width/2, this.height/2 +30)
-            this.context.fillText('You have 3 lives', this.width/2, this.height/2 +80)
+            this.context.fillText('BRiCK BReakER!', this.width/2, 100)
+
             this.context.font = "50px Arial"
             this.context.fillStyle = '#F2AA4C'
-            this.context.fillText('Press RETURN to start!', this.width/2, this.height - 40)
+            this.context.fillText('Press RETURN to start!', this.width/2, this.height/2 - 40)
+
+            this.context.fillStyle = '#E94B3C'
+            this.context.font = "50px Arial"
+            this.context.fillText('You have 3 Lives', this.width/2, this.height/2 +40)
+
+            this.context.font = "40px Arial"
+            this.context.fillStyle = 'white'
+            this.context.fillText('Press ESC to Pause', this.width/2, this.height - 100)
+
+            this.context.font = "30px Arial"
+            this.context.fillText('LEFT ARROW KEY to move left', 300, this.height - 40)
+            this.context.fillText('RIGHT ARROW KEY to move right', this.width - 300, this.height - 40)
         }
 
         if(this.gameState == GAMESTATE.GAMEOVER)
