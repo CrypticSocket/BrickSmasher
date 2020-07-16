@@ -43,6 +43,10 @@ export default class Game {
         {
             this.gameState = GAMESTATE.PAUSED
         }
+        else if(this.gameState == GAMESTATE.GAMEOVER)
+        {
+            return
+        }
         else{
             this.gameState = GAMESTATE.RUNNING
         }
