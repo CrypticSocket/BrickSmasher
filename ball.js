@@ -1,4 +1,4 @@
-import { detectCollisionPaddle } from "./bounds.js"
+import { detectCollision } from "./bounds.js"
 
 export default class Ball {
     constructor(game)
@@ -40,7 +40,7 @@ export default class Ball {
         {
             this.speed.x = -this.speed.x
         }
-        if(this.position.y <= 0 + this.size || detectCollisionPaddle(this, this.game.paddle))
+        if(this.position.y <= 0 + this.size || detectCollision(this, this.game.paddle))
         {
             this.speed.y = -this.speed.y
         }
