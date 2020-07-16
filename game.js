@@ -55,8 +55,13 @@ export default class Game {
             this.gameState = GAMESTATE.MENU
             this.currentLevel = 0
         }
-        else
+        else if(this.gameState == GAMESTATE.GAMEOVER)
+        {
+            return;
+        }
+        else{
             this.gameState = GAMESTATE.RUNNING
+        }
     }
 
     draw()
